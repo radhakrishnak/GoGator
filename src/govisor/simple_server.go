@@ -14,4 +14,3 @@ func main() {
     http.HandleFunc("/", defaultHandler)
     http.ListenAndServe(":8080", nil)
 }
-
