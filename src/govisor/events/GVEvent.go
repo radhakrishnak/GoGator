@@ -18,6 +18,7 @@ type GVEvent struct {
 }
 
 func (gEvent GVEvent) GetSrc() EventHandler{
+	fmt.Println("In EventHandler")
 	return gEvent.src
 }
 func (gEvent GVEvent) GetDst() EventHandler{
