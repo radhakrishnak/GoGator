@@ -14,13 +14,11 @@ func (gEvent GVEvent) GetSrc() EventHandler{
 func (gEvent GVEvent) GetDst() EventHandler{
 	return gEvent.dst
 }
-func (gEvent GVEvent) SetSrc (srcHandler EventHandler) GVEvent {
+func (gEvent *GVEvent) SetSrc (srcHandler EventHandler) {
 	gEvent.src = srcHandler
-	return gEvent
 }
-func (gEvent GVEvent)SetDst(dstHandler EventHandler) GVEvent {
+func (gEvent *GVEvent)SetDst(dstHandler EventHandler) {
 	gEvent.dst = dstHandler
-	return gEvent
 }
 func Lite(){
 	var a, b EventHandler
