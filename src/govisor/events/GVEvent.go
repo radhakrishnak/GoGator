@@ -8,6 +8,10 @@ type GVEvent struct {
 	src, dst EventHandler
 }
 
+func NewGVEvent(source EventHandler, dest EventHandler) *GVEvent {
+	return &GVEvent{source, dest}
+}
+
 func (gEvent GVEvent) GetSrc() EventHandler{
 	return gEvent.src
 }

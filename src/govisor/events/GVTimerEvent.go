@@ -3,14 +3,16 @@ package events
 import (
 
 )
-type ID int 
+var ID int = 0
 type GVTimerEvent struct{
+	gEvent GVEvent
 	expireTime int64
 	id int
 }
 
-func NewGVTimerEvent() *GVTimerEvent {
-	return &GVTimerEvent{expireTime:50, id:1}
+func NewGVTimerEvent(expTime int64, source EventHandler, dest EventHandler) *GVTimerEvent {
+	ID = ID + 1
+	return &GVTimerEvent{gEvent:*NewGVEvent(source,dest),expireTime:expTime, id:ID}
 }
 
 func (timer *GVTimerEvent) SetExpireTime(expireTime int64){
