@@ -34,3 +34,11 @@ func (pq *PriorityQueue) Pop() interface{} {
 	*pq = old[0 : n-1]
 	return gvtimerevent
 }
+
+// update modifies the priority and value of an GVTimerEvent in the queue.
+func (pq *PriorityQueue) update(gvtimerevent *GVTimerEvent, value string, priority int) {
+	heap.Remove(pq, gvtimerevent.index)
+	gvtimerevent.value = value
+	gvtimerevent.priority = priority
+	heap.Push(pq, gvtimerevent)
+}
