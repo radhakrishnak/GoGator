@@ -20,25 +20,4 @@ func (pq PriorityQueue) Less(i, j int) bool {
 	return pq[i].priority > pq[j].priority
 }
 
-func (pq PriorityQueue) Swap(i, j int) {
-	pq[i], pq[j] = pq[j], pq[i]
-	pq[i].index = i
-	pq[j].index = j
-}
-
-func (pq *PriorityQueue) Push(x interface{}) {
-	n := len(*pq)
-	gvtimerevent := x.(*GVTimerEvent)
-	gvtimerevent.index = n
-	*pq = append(*pq, gvtimerevent)
-}
-
-func (pq *PriorityQueue) Pop() interface{} {
-	old := *pq
-	n := len(old)
-	gvtimerevent := old[n-1]
-	gvtimerevent.index = -1 // for safety
-	*pq = old[0 : n-1]
-	return gvtimerevent
-}
 
