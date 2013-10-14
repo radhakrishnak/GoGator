@@ -11,4 +11,4 @@ type GVTimer struct{
 }
 func NewGVTimer() *GVTimer {
 	return &GVTimer{max_timeout:5000, min_timeout:1}
-}
+}	
