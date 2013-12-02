@@ -58,7 +58,7 @@ func (p *PortStatus) Write(b []byte) (n int, err error) {
 	}
 	n += m
 
-		if err = binary.Read(buf, binary.BigEndian, &p.TotalLength); err != nil {
+		/*if err = binary.Read(buf, binary.BigEndian, &p.TotalLength); err != nil {
 			return
 		}
 		n += 2
@@ -76,7 +76,7 @@ func (p *PortStatus) Write(b []byte) (n int, err error) {
 		if m, err := p.Data.Write(b[n:]); m == 0 {
 			return m, err
 		}
-		n += m
+		n += m*/
 	return
 }
 
