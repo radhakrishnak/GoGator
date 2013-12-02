@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 	//"golfer/util"
-	"govisor/packet"
+	"govisor/pkt"
 )
 
 type PacketIn struct {
