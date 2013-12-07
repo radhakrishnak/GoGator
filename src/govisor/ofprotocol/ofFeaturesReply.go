@@ -53,7 +53,7 @@ func NewFeaturesReply() *OFFeaturesReply {
 }
 
 func (f *OFFeaturesReply) ComputeLength(n int16) int16 {
-	length := util.Uint16_Int16(MINIMUM_LENGTH_FR)
+	length := utils.Uint16_Int16(MINIMUM_LENGTH_FR)
 	return length
 }
 
