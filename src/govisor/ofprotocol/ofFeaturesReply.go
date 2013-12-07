@@ -1,4 +1,4 @@
-package ofp10
+package ofprotocol
 
 import (
 	"bytes"
