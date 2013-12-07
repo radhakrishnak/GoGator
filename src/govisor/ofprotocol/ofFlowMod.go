@@ -41,19 +41,7 @@ func NewFlowMod() *OFFlowMod {
 	return f
 }
 
-//func (fm *OFFlowMod) SetInport (InPort uint16)  {
-//	fm.InPort = InPort
-//
-//}
 
-//func (fm *OFFlowMod) SetBufferID (BufferID uint32)  {
-//	fm.BufferID = BufferID
-//
-//}
-//func (fm *OFFlowMod) SetCommand (Command uint16)  {
-//	fm.Command = Command
-//
-//}
 func (f *OFFlowMod) ComputeLength() (n uint16) {
 	//	for _, v := range f.Actions {
 	//		n += v.Len()
